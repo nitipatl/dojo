@@ -6,14 +6,8 @@ func digit(input int) string {
 	mid := []string{"   ", "  |", " _|"}
 	bot := []string{"   ", "  |", "|_ "}
 	output := ""
-	if input == 2 {
-		output += top[2] + "\n"
-		output += mid[2] + "\n"
-		output += bot[2]
-	} else {
-		output += top[1] + "\n"
-		output += mid[1] + "\n"
-		output += bot[1]
-	}
+	output += top[input] + "\n"
+	output += mid[input] + "\n"
+	output += bot[input]
 	return output
 }
