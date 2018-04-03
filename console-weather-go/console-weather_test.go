@@ -14,7 +14,7 @@ func Test_input_1_digitDisplay_1(t *testing.T) {
 func Test_input_2_digitDisplay_2(t *testing.T) {
 	output := " _ \n"
 	output += " _|\n"
-	output += "|_"
+	output += "|_ "
 	if digit(2) != output {
 		t.Error("actual ", digit(2))
 	}

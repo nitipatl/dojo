@@ -2,14 +2,14 @@ package weather
 
 func digit(input int) string {
 
-	top := []string{"   ", "   "}
-	mid := []string{"   ", "  |"}
-	bot := []string{"   ", "  |"}
+	top := []string{"   ", "   ", " _ "}
+	mid := []string{"   ", "  |", " _|"}
+	bot := []string{"   ", "  |", "|_ "}
 	output := ""
 	if input == 2 {
-		output += " _ \n"
-		output += " _|\n"
-		output += "|_"
+		output += top[2] + "\n"
+		output += mid[2] + "\n"
+		output += bot[2]
 	} else {
 		output += top[1] + "\n"
 		output += mid[1] + "\n"
