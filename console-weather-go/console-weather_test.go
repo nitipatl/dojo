@@ -28,3 +28,12 @@ func Test_input_9_digitDisplay_9(t *testing.T) {
 		t.Error("actual ", digit(9))
 	}
 }
+
+func Test_input_29_digitDisplay_29(t *testing.T) {
+	output := " _  _ \n"
+	output += " _||_|\n"
+	output += "|_  _|"
+	if digit(29) != output {
+		t.Error("actual ", digit(29))
+	}
+}
