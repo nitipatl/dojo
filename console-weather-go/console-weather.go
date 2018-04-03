@@ -54,13 +54,13 @@ func digit(input int) string {
 			" _|",
 		},
 	}
-	top := []string{" _ ", "   ", " _ ", " _ ", "   ", " _ ", " _ ", " _ ", " _ ", " _ "}
-	mid := []string{"| |", "  |", " _|", " _|", "|_|", "|_ ", "|_ ", "  |", "|_|", "|_|"}
-	bot := []string{"|_|", "  |", "|_ ", " _|", "  |", " _|", "|_|", "  |", "|_|", " _|"}
+	// top := []string{" _ ", "   ", " _ ", " _ ", "   ", " _ ", " _ ", " _ ", " _ ", " _ "}
+	// mid := []string{"| |", "  |", " _|", " _|", "|_|", "|_ ", "|_ ", "  |", "|_|", "|_|"}
+	// bot := []string{"|_|", "  |", "|_ ", " _|", "  |", " _|", "|_|", "  |", "|_|", " _|"}
 
 	output := ""
-	output += top[input] + "\n"
-	output += mid[input] + "\n"
-	output += bot[input]
+	output += digitNumber[input][0] + "\n"
+	output += digitNumber[input][1] + "\n"
+	output += digitNumber[input][2]
 	return output
 }
