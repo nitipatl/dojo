@@ -1,5 +1,9 @@
 package weather
 
+import (
+	"strconv"
+)
+
 func digit(input int) string {
 
 	digitNumber := [][3]string{
@@ -55,16 +59,17 @@ func digit(input int) string {
 		},
 	}
 
-	output := ""
-	if input == 29 {
-		output += digitNumber[2][0] + digitNumber[9][0] + "\n"
-		output += digitNumber[2][1] + digitNumber[9][1] + "\n"
-		output += digitNumber[2][2] + digitNumber[9][2]
-	} else {
-		output += digitNumber[input][0] + "\n"
-		output += digitNumber[input][1] + "\n"
-		output += digitNumber[input][2]
+	out := [3]string{
+		"",
+		"",
+		"",
 	}
-
+	for _, num := range strconv.Itoa(input) {
+		number, _ := strconv.Atoi(string(num))
+		out[0] += digitNumber[number][0]
+		out[1] += digitNumber[number][1]
+		out[2] += digitNumber[number][2]
+	}
+	output := out[0] + "\n" + out[1] + "\n" + out[2]
 	return output
 }
