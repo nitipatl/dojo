@@ -37,3 +37,12 @@ func Test_input_29_digitDisplay_29(t *testing.T) {
 		t.Error("actual ", digit(29))
 	}
 }
+
+func Test_input_minus1_digitDisplay_minus1(t *testing.T) {
+	output := "    \n"
+	output += "-  |\n"
+	output += "   |"
+	if digit(-1) != output {
+		t.Error("actual ", digit(-1))
+	}
+}
