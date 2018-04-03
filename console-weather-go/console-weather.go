@@ -66,7 +66,7 @@ func digit(input int) string {
 	}
 	for _, num := range strconv.Itoa(input) {
 		number, _ := strconv.Atoi(string(num))
-		for i := 0; i < 3; i++ {
+		for i := 0; i < len(out); i++ {
 			out[i] += digitNumber[number][i]
 		}
 	}
